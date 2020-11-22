@@ -1,22 +1,26 @@
 package Inter_Thread_Communication;
 
-public class Synchronization {
+public class Lock_with_custom_object {
     public static int count1 = 0;
     public static int count2 = 0;
 
+    // create two custom objects, use their intrinsic locks ato synchronize count1 and count2
+    public static final Object lock1 = new Object();
+    public static final Object lock2 = new Object();
+
     public static void increment1() {
-        synchronized (Synchronization.class) {
+        synchronized (lock1) {
             count1++;
         }
     }
 
     public static void increment2() {
-        synchronized (Synchronization.class) {
+        synchronized (lock2) {
             count2++;
         }
     }
 
-    public static void process() {
+    public static boolean process() {
         Thread t1 =  new Thread( new Runnable(){
             @Override
             public void run() {
@@ -45,6 +49,8 @@ public class Synchronization {
 
         System.out.println("Counter1 is:" + count1);
         System.out.println("Counter2 is:" + count2);
+
+        return (count1 == 100 && count2 == 100);
     }
 
     public static void main(String[] args) {
