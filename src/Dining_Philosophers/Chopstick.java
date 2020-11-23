@@ -24,7 +24,7 @@ public class Chopstick {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
+
         return false;
     }
 
