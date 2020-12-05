@@ -12,7 +12,7 @@ public class margesortTest {
         numbers = createRandomArray(10);
         int numThreads = Runtime.getRuntime().availableProcessors();
         Paralled_MergeSort parallel = new Paralled_MergeSort(numbers);
-        parallel.mergesortParalled(0, numbers.length - 1, numThreads);
+        parallel.paralledMergeSort(0, numbers.length - 1, numThreads);
         parallel.showResult();
     }
 

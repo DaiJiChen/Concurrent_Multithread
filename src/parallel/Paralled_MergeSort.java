@@ -18,8 +18,8 @@ public class Paralled_MergeSort {
 
         int mid = (low + high) / 2;
 
-        Thread leftSorter = mergesortParalled(low, mid, numThreads);
-        Thread rightSorter = mergesortParalled(mid + 1, high, numThreads);
+        Thread leftSorter = mergesortThread(low, mid, numThreads);
+        Thread rightSorter = mergesortThread(mid + 1, high, numThreads);
 
         leftSorter.start();
         rightSorter.start();
@@ -34,7 +34,7 @@ public class Paralled_MergeSort {
         merge(low, mid, high);
     }
 
-    public Thread mergesortParalled(int low, int high, int numThreads) {
+    public Thread mergesortThread(int low, int high, int numThreads) {
         return new Thread() {
             @Override
             public void run() {
