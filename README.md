@@ -1,6 +1,10 @@
 # Concurrent_Mutlithread
-### Practiced concurrent and multithread concepts in Java.
-### Classical problems sloved： 
-- [X] Dining Philosopher problem
-- [X] Studnet Library problem (multithread using multi-resources concurrently)
+### Java code demos of:
+### 1. MulthThread concept and ThreadPool
+### 2. Concurrent
+### 3. Parallel
+
+
+
+
  
