@@ -28,7 +28,7 @@ public class Main {
     public static int[] initializeNms() {
         Random random = new Random();
 
-        int[] nums = new int[10000];
+        int[] nums = new int[10000000];
 
         for (int i = 0; i < 10000; i++) {
             nums[i] = random.nextInt(1000);
